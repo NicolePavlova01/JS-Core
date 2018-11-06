@@ -1,5 +1,9 @@
-function print(str){
-    for(let letter in str){
-        console.log(`str[${letter}] -> ${str[letter]}`);
+function print(str,text){
+    let count = 0;
+    let index = text.indexOf(str);
+    while(index > -1){
+        count++;
+        index = text.indexOf(str, index + 1);
     }
+    return count;
 }
